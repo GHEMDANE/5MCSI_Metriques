@@ -5,7 +5,7 @@ from datetime import datetime
 from urllib.request import urlopen
 import sqlite3
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
@@ -35,5 +35,5 @@ def mongraphique():
 def histogramme():
     return render_template("histogramme.html")
     
-if __name == "__main":
+if __name == "__main__":
   app.run(debug=True)
